@@ -1,0 +1,38 @@
+.section-heading {
+  .title {
+    background: linear-gradient(rgb(26, 54, 104), rgb(173, 192, 216));
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    height: 200px;
+    margin: 0;
+  }
+  .add-todo-box {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(#000, 0.08);
+    padding: 25px;
+    margin: -45px auto 0;
+    max-width: 800px;
+    width: 75%;
+    .btn-add {
+      background: #e08f62;
+      border: none;
+      color: white;
+      font-weight: bold;
+      .add-icon {
+        font-size: 16px;
+        margin-right: 5px;
+
+      }
+      &:hover {
+        background-color: #cc7351;
+      }
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}
