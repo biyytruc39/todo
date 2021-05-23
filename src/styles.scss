@@ -109,7 +109,7 @@ input, select {
 }
 html {
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   @media (max-width: 780px) {
     font-size: 12px;
   }
@@ -175,3 +175,6 @@ html {
     }
   }
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

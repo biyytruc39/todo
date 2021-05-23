@@ -1,17 +1,33 @@
 <section class="section-heading">
-  <h1 class="title">Todo with YZL</h1>
+  <h1 class="title">Todo with biyytruc</h1>
   <div class="add-todo-box">
-    <form>
+    <form #form="ngForm" (ngSubmit)="onTodoSubmit(form)">
       <h4 class="label">New Todo</h4>
       <div class="field is-grouped">
         <p class="control is-expanded">
-          <input class="input is-small" type="text" placeholder="Type todo text here ...">
+          <input
+            ngModel
+            #todoText="ngModel"
+            name="text"
+            required
+            class="input is-small"
+            type="text"
+            placeholder="Type todo text here ..."
+          />
         </p>
         <p class="control">
-          <button class="button btn-add is-small">
+          <button type="submit" class="button btn-add is-small">
             <i class="material-icons add-icon">add</i>
             Add
           </button>
+        </p>
+      </div>
+      <div>
+        <p
+          class="error-mess"
+          *ngIf="!!showInvalidMess && todoText.errors?.required"
+        >
+          Please enter your todo!
         </p>
       </div>
     </form>
@@ -20,37 +36,11 @@
 
 <section class="section-body">
   <div class="todos-list">
-    <div class="todo-item completed">
-      <div class="checkbox">
-        <i class="material-icons done-icon">done</i>
-      </div>
-      <div class="todo-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </div>
-      <div class="todo-control">
-        <div class="todo-control-button">
-          <i class="material-icons edit-icon">edit</i>
-        </div>
-        <div class="todo-control-button">
-          <i class="material-icons delete-icon">delete</i>
-        </div>
-      </div>
-    </div>
-    <div class="todo-item">
-      <div class="checkbox">
-        <i class="material-icons done-icon">done</i>
-      </div>
-      <div class="todo-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </div>
-      <div class="todo-control">
-        <div class="todo-control-button">
-          <i class="material-icons edit-icon">edit</i>
-        </div>
-        <div class="todo-control-button">
-          <i class="material-icons delete-icon">delete</i>
-        </div>
-      </div>
-    </div>
+    <app-todo-item
+      *ngFor="let todo of todos; index as i"
+      [todo]="todo"
+      (todoClicked)="setCompleted(todo)"
+      (editTodo)="editTodo(i)"
+    ></app-todo-item>
   </div>
 </section>

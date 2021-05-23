@@ -38,99 +38,14 @@
         box-shadow: none;
       }
     }
+    .error-mess {
+      color: #CC0000;
+      font-size: .75em;
+    }
   }
 }
 .section-body {
   margin: 0 auto;
   max-width: 800px;
   width: 75%;
-  .todo-item {
-    border-bottom: 1px solid #f2f3f5;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    padding: 2em 1.5em;
-    position: relative;
-    .checkbox {
-      border: 2px solid #eee;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 10px;
-      height: 1.5em;
-      width: 1.5em;
-      .done-icon {
-        font-size: 1em;
-        opacity: 0
-      }
-    }
-    .todo-control {
-      display: flex;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(5px);
-      .todo-control-button {
-        background-color: #f2f3f5;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 5px 10px;
-        &:first-of-type {
-          border-top-left-radius: 7px;
-        }
-        &:last-of-type {
-          border-top-right-radius: 7px;
-        }
-        &:hover {
-          background-color: #eee;
-          .edit-icon {
-            color: #A1DE93;
-          }
-          .delete-icon {
-            color: #F47C7C;
-          }
-        }
-        .material-icons {
-          font-size: 16px;
-          color: rgb(85, 84, 84);
-        }
-      }
-    }
-    &:hover {
-      .checkbox {
-        background-color: #eee;
-        transition: background-color .3s;
-        .done-icon {
-          opacity: 0.3;
-          transition: opacity .3s;
-        }
-      }
-      .todo-control {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-        transition: all .3s;
-      }
-    }
-    &.completed {
-      .checkbox {
-        background-color: rgb(173, 192, 216);
-        border-color: rgb(173, 192, 216);
-        .done-icon {
-          opacity: 1;
-        }
-      }
-      .todo-text {
-        color: #aaa;
-      }
-      .todo-control {
-        opacity: 0;
-        visibility: hidden;
-      }
-    }
-  }
 }
