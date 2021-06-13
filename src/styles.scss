@@ -150,7 +150,7 @@ html {
   background-color: #fff;
   border-color: #dbdbdb;
   border-width: 1px;
-  color: #363636;
+  color: rgb(85, 84, 84);
   cursor: pointer;
   justify-content: center;
   padding-bottom: calc(.5em - 1px);
@@ -159,6 +159,26 @@ html {
   padding-top: calc(.5em - 1px);
   text-align: center;
   white-space: nowrap;
+  &:focus {
+    box-shadow: none;
+  }
+  &:hover {
+    background-color: #dbdbdb;
+  }
+  &.has-icon {
+    .icon {
+      font-size: 1.25em;
+      margin-right: 3px;
+    }
+  }
+  &.btn-purple {
+    background: #7A6AA9;
+    border: none;
+    color: white;
+    &:hover {
+      background-color: darken(#7A6AA9, 10%);
+    }
+  }
 }
 .field {
   &.is-grouped {
@@ -175,6 +195,8 @@ html {
     }
   }
 }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.error-mess {
+  color: #CC0000;
+  font-size: .75em;
+  margin-top: 1em;
+}

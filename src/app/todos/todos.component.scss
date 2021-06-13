@@ -1,51 +1,31 @@
 .section-heading {
-  .title {
-    background: linear-gradient(rgb(26, 54, 104), rgb(173, 192, 216));
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3em;
-    font-weight: bold;
-    height: 200px;
-    margin: 0;
-  }
-  .add-todo-box {
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 4px 12px rgba(#000, 0.08);
-    padding: 1.5em;
-    margin: -3em auto 0;
-    max-width: 800px;
-    width: 75%;
-    .label {
-      color: #7A6AA9;
-      margin-bottom: .75rem;
-    }
-    .btn-add {
-      background: #7A6AA9;
-      border: none;
-      color: white;
-      .add-icon {
-        font-size: 1em;
-        margin-right: 5px;
-
-      }
-      &:hover {
-        background-color: #B3A0C9;
-      }
-      &:focus {
-        box-shadow: none;
-      }
-    }
-    .error-mess {
-      color: #CC0000;
-      font-size: .75em;
-    }
-  }
+	.title {
+		background: linear-gradient(rgb(26, 54, 104), rgb(173, 192, 216));
+		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 3em;
+		font-weight: bold;
+		height: 200px;
+		margin: 0;
+	}
+	.add-todo-box {
+		background-color: #fff;
+		border-radius: 4px;
+		box-shadow: 0 4px 12px rgba(#000, 0.08);
+		padding: 1.5em;
+		margin: -3em auto 0;
+		max-width: 800px;
+		width: 75%;
+		.label {
+			color: #7A6AA9;
+			margin-bottom: .75rem;
+		}
+	}
 }
 .section-body {
-  margin: 0 auto;
-  max-width: 800px;
-  width: 75%;
+	margin: 0 auto;
+	max-width: 800px;
+	width: 75%;
 }

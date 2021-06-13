@@ -5,42 +5,24 @@
       <h4 class="label">New Todo</h4>
       <div class="field is-grouped">
         <p class="control is-expanded">
-          <input
-            ngModel
-            #todoText="ngModel"
-            name="text"
-            required
-            class="input is-small"
-            type="text"
-            placeholder="Type todo text here ..."
-          />
+          <input ngModel #todoText="ngModel" name="text" required class="input" type="text"
+            placeholder="Type todo text here ..." />
         </p>
         <p class="control">
-          <button type="submit" class="button btn-add is-small">
-            <i class="material-icons add-icon">add</i>
+          <button type="submit" class="button has-icon btn-purple btn-add">
+            <i class="material-icons icon">add</i>
             Add
           </button>
         </p>
       </div>
-      <div>
-        <p
-          class="error-mess"
-          *ngIf="!!showInvalidMess && todoText.errors?.required"
-        >
-          Please enter your todo!
-        </p>
-      </div>
+      <p class="error-mess" *ngIf="!!showInvalidMess && todoText.errors?.required">Please enter your todo!</p>
     </form>
   </div>
 </section>
 
 <section class="section-body">
   <div class="todos-list">
-    <app-todo-item
-      *ngFor="let todo of todos; index as i"
-      [todo]="todo"
-      (todoClicked)="setCompleted(todo)"
-      (editTodo)="editTodo(i)"
-    ></app-todo-item>
+    <app-todo-item *ngFor="let todo of todos; index as i" [todo]="todo" (todoClicked)="setCompleted(todo)"
+      (editTodo)="editTodo(i, todo)" (removeTodo)="removeTodo(i)"></app-todo-item>
   </div>
 </section>

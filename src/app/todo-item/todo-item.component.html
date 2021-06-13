@@ -6,10 +6,10 @@
     {{todo.text}}
   </div>
   <div class="todo-control" (click)="$event.stopPropagation()">
-    <div class="todo-control-button">
-      <i class="material-icons edit-icon" (click)="onEditClicked()">edit</i>
+    <div class="todo-control-button" (click)="onEditClicked()">
+      <i class="material-icons edit-icon">edit</i>
     </div>
-    <div class="todo-control-button">
+    <div class="todo-control-button" (click)="onRemoveClicked()">
       <i class="material-icons delete-icon">delete</i>
     </div>
   </div>

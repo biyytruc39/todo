@@ -1,0 +1,14 @@
+.title {
+  color: #7A6AA9;
+  margin-bottom: 0.75rem;
+}
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+  .control {
+    &:not(:last-child) {
+      margin-right: .5em;
+    }
+  }
+}
